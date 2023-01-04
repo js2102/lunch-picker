@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-
 import styled from 'styled-components';
+
+import {mapTypeControl, zoomControl} from '../utils/kakaomap';
 
 const Component = {
   Wrapper: styled.div`
@@ -20,8 +21,6 @@ const Map = () => {
         };
     
         const map = new kakaoMaps.Map(container, options);
-        const mapTypeControl = new kakaoMaps.MapTypeControl();
-        const zoomControl = new kakaoMaps.ZoomControl();
         map.addControl(mapTypeControl, kakaoMaps.ControlPosition.TOPRIGHT);
         map.addControl(zoomControl, kakaoMaps.ControlPosition.RIGHT);
       }
